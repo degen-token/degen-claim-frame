@@ -19,6 +19,8 @@ export const app = new Frog({
 });
 
 app.frame('/', (c) => {
+  // const { fid } = c.frameData || { fid: '15983' };
+
   return c.res({
     action: '/finish',
     image: (
@@ -52,16 +54,46 @@ app.frame('/', (c) => {
         </div>
       </div>
     ),
-    intents: [<Button.Transaction target="/claim">Claim</Button.Transaction>],
+    intents: [
+      <Button.Transaction target="/claim">Claim</Button.Transaction>,
+      <Button.Reset>Reset</Button.Reset>,
+    ],
   });
 });
 
 app.frame('/finish', (c) => {
-  const { transactionId } = c;
+  // const { transactionId } = c || { transactionId: 'None.' };
+
   return c.res({
     image: (
-      <div style={{ color: 'white', display: 'flex', fontSize: 60 }}>
-        Transaction ID: {transactionId}
+      <div
+        style={{
+          alignItems: 'center',
+          background: '#0f172a',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        <div
+          style={{
+            color: '#38bdf8',
+            fontSize: 60,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          The Hat Stays On!
+        </div>
       </div>
     ),
   });
