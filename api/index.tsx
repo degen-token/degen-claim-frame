@@ -54,10 +54,7 @@ app.frame('/', (c) => {
         </div>
       </div>
     ),
-    intents: [
-      <Button.Transaction target="/claim">Claim</Button.Transaction>,
-      <Button.Reset>Reset</Button.Reset>,
-    ],
+    intents: [<Button.Transaction target="/claim">Claim</Button.Transaction>],
   });
 });
 
