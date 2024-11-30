@@ -48,7 +48,7 @@ app.frame('/', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          Claim Airdrop 2 Season X!
+          Claim Raindrop Season 3!
         </div>
       </div>
     ),
@@ -77,7 +77,7 @@ app.transaction('/claim', async (c) => {
   try {
     // Fetch Merkle proof data from the API
     const response = await fetch(
-      `https://api.degen.tips/airdrop2/seasonx/merkleproofs?wallet=${address}`
+      `https://api.degen.tips/raindrop/season3/merkleproofs?wallet=${address}`
     );
     if (!response.ok) {
       throw new Error('Failed to fetch Merkle proof data.');
@@ -104,7 +104,7 @@ app.transaction('/claim', async (c) => {
       chainId: 'eip155:8453', // Replace with the appropriate chain ID
       functionName: 'claim', // Replace with the actual function name
       args: [merkleIndex, merkleWallet, merkleAmount, merkleProof],
-      to: '0x053002b4B332b422733C9469dDF9990bB6235e3d', // Replace with the actual contract address
+      to: '0x16EB07225C95FBec33BcB40f1a69c61F5A9aa6D5', // Replace with the actual contract address
     });
   } catch (error) {
     return c.error({ message: (error as Error).message });
