@@ -1,5 +1,7 @@
 # $DEGEN Claim Frame
 
+## Getting Started
+
 ```
 npm install
 npm run dev
