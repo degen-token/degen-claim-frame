@@ -76,7 +76,6 @@ async function getIsClaimed(merkleIndex: any) {
     // Call the `isClaimed` function
     const isClaimed = await contract.isClaimed(merkleIndex.toString());
 
-    console.log(`isClaimed for index ${merkleIndex}:`, isClaimed);
     return isClaimed;
   } catch (error) {
     console.error('Error fetching isClaimed status:', (error as Error).message);
