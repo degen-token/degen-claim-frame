@@ -8,6 +8,7 @@
     "deploy": "vercel"
   },
   "dependencies": {
+    "ethers": "^6.13.4",
     "frog": "latest",
     "hono": "^4"
   },
