@@ -116,7 +116,9 @@ app.transaction('/claim', async (c) => {
 
     // Check if the response contains data
     if (!data || !data.length) {
-      throw new Error('No Merkle proof data found for this address.');
+      throw new Error(
+        'Oops! This wallet isn’t linked to an airdrop. Try another one?'
+      );
     }
 
     // Extract the required parameters
