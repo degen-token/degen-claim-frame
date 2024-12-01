@@ -138,10 +138,7 @@ app.transaction('/claim', async (c) => {
       to: '0x16EB07225C95FBec33BcB40f1a69c61F5A9aa6D5', // Replace with the actual contract address
     });
   } catch (error) {
-    return c.error({
-      message:
-        'Oops! Airdrop failed.This might happen if you’ve already claimed it.',
-    });
+    return c.error({ message: (error as Error).message });
   }
 });
 
