@@ -79,7 +79,7 @@ async function getIsClaimed(merkleIndex: any) {
     console.log(`isClaimed for index ${merkleIndex}:`, isClaimed);
     return isClaimed;
   } catch (error) {
-    console.error('Error fetching isClaimed status:', error.message);
+    console.error('Error fetching isClaimed status:', (error as Error).message);
     throw error;
   }
 }
