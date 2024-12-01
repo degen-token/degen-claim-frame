@@ -1,9 +1,9 @@
 import { Button, Frog } from 'frog';
 import { devtools } from 'frog/dev';
 // import { neynar } from 'frog/hubs'
+import { ethers } from 'ethers';
 import { handle } from 'frog/next';
 import { serveStatic } from 'frog/serve-static';
-import { ethers } from 'ethers';
 import { abi } from './abi.js';
 
 // Uncomment to use Edge Runtime.
