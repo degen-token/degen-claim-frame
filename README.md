@@ -1,4 +1,6 @@
-# $DEGEN Claim Frame
+# $DEGEN Claim Frame (Archived)
+
+**Note:** This repository is archived and no longer maintained.
 
 ## Getting Started
 
